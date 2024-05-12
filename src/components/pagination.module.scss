@@ -24,7 +24,24 @@
   margin-top: 10px;
 }
 
-.pagination span {
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .pagination span {
     cursor: pointer;
     margin: 0 5px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+  
+  .pagination__selected {
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
   }

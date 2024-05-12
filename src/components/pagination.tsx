@@ -26,7 +26,6 @@ const Pagination = () => {
   }, [pageNumber]);
 
   function pageHandler(page: number): void {
-    console.log(page, "page");
     const totalPages = Math.ceil(products.length / 10); 
     if (page > 0 && page <= totalPages) { 
       setPageNumber(page);
@@ -48,7 +47,9 @@ const Pagination = () => {
         <div className={styles.pagination}>
             
         <span onClick={()=> pageHandler(pageNumber - 1)}>👈🏻</span>
-        <span>{pageNumber}</span>
+        {[...Array(products.length / 10)].map((_, i) => {
+          return <span key={i} className={pageNumber === i + 1 ? "pagination__selected" : ""} onClick={() => pageHandler(i + 1)}>{i + 1}</span>
+        })}
         <span onClick={()=> pageHandler(pageNumber + 1)}>👉🏻</span>
         </div>
     </div>
