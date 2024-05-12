@@ -1,0 +1,25 @@
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: red($color: #000000);
+}
+
+.products__single {
+  margin: 20px;
+  display: inline-block;
+}
+
+.products__single img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.products__single span {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+}
